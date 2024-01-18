@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index-style.css">
     <title>Accessible Habit Tracker</title>
 </head>
 <body>
@@ -12,7 +12,11 @@
         <div class="header-container">
             <h1 class="habit-tracker-heading">Habit Tracker</h1>
             <div class="accessibility-options">
-                <button id="toggle-colorblind-btn" onclick="toggleColorblind()">Toggle Colorblind Mode</button>
+                <div class="dropdown-content">
+                    <a href="#" class="dropdown-item" onclick="toggleColorblind()">Toggle Colorblind Mode</a>
+                    <a href="#" class="dropdown-item" onclick="toggleSpeechToText()">Toggle Speech-to-Text</a>
+                </div>
+                <button id="accessibility-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="Accessibility Options" onclick="toggleDropdown()">Accessibility Options</button>
             </div>
         </div>
     </header>
@@ -32,10 +36,20 @@
     </main>
 
     <footer role="contentinfo">
-        <p>&copy; 2024 My Habit Tracker. All rights reserved.</p>
+        <p>&copy; 2024 Habit Tracker. All rights reserved.</p>
         <a href="about.html">About Us</a>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/index-script.js"></script>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.querySelector('.dropdown-content');
+            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+        }
+
+        function toggleSpeechToText() {
+            // Add your logic for toggling Speech-to-Text here
+        }
+    </script>
 </body>
 </html>

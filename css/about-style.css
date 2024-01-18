@@ -1,6 +1,48 @@
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Adjusted to column layout */
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+.accessibility-options {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.accessibility-options:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 
 .header-container {
@@ -14,15 +56,6 @@ body {
 
 .habit-tracker-heading {
   margin: 0;
-}
-
-.accessibility-options {
-  display: flex;
-  gap: 10px;
-}
-
-.main {
-  padding: 20px;
 }
 
 .habit-form {
@@ -54,27 +87,24 @@ button {
 }
 
 .habit-item {
-  border: 1px solid #ddd;
   margin-bottom: 10px;
+  border: 1px solid #ddd;
   padding: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+.habit-item span {
+  margin-right: 10px;
 }
 
 .habit-item button {
-  background-color: #e74c3c;
+  background-color: #dc3545;
   color: #fff;
   border: none;
-  padding: 8px;
+  padding: 5px 10px;
   cursor: pointer;
-}
-
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
 }
 
 /* Colorblind options */
