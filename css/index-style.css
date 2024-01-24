@@ -140,29 +140,18 @@ button {
   padding-top: 10px;
 }
 
-/* Colorblind options */
-.colorblind-friendly,
-.habit-list.colorblind-friendly,
-.habit-item.colorblind-friendly,
-.habit-form.colorblind-friendly label,
-.habit-form.colorblind-friendly input {
-  background-color: #f0f0f0;
-  color: #333;
+/* Colorblind-friendly styles for protanopia */
+.colorblind-friendly-protanopia header {
+  background-color: #ffe5e5; /* Example color for colorblind-friendly background */
+  color: #cc0000; /* Example color for text in colorblind-friendly mode */
 }
 
-.colorblind-friendly-protanopia .habit-list,
-.colorblind-friendly-protanopia .habit-item,
-.colorblind-friendly-deuteranopia .habit-list,
-.colorblind-friendly-deuteranopia .habit-item {
-  border-color: #bbb;
+.colorblind-friendly-protanopia main {
+  background-color: #ffe5cc; /* Example color for colorblind-friendly background */
+  color: #994c00; /* Example color for text in colorblind-friendly mode */
 }
 
-.colorblind-friendly-protanopia .habit-item span,
-.colorblind-friendly-deuteranopia .habit-item span {
-  color: #333;
-}
-
-.colorblind-friendly-protanopia .habit-item button,
-.colorblind-friendly-deuteranopia .habit-item button {
-  background-color: #ff0000;
+.colorblind-friendly-protanopia footer {
+  background-color: #ffe5b2; /* Example color for colorblind-friendly background */
+  color: #997a00; /* Example color for text in colorblind-friendly mode */
 }

@@ -15,8 +15,9 @@
             <h1 class="habit-tracker-heading">Habit Tracker</h1>
             <div class="accessibility-options">
                 <div class="dropdown-content">
-                    <a href="#" class="dropdown-item" onclick="toggleColorblind()">Toggle Colorblind Mode</a>
-                    <a href="#" class="dropdown-item" onclick="toggleSpeechToText()">Toggle Speech-to-Text</a>
+                    <button class="dropdown-item" onclick="toggleSpeechToText()">Toggle Speech-to-Text</button>
+                    <button class="dropdown-item" onclick="toggleColorblind()">Toggle Colorblind Mode</button>
+                    <button onclick="removeAllHabits()">Remove All Habits</button>
                 </div>
                 <button id="accessibility-dropdown-btn" aria-haspopup="true" aria-expanded="false" aria-label="Accessibility Options" onclick="toggleDropdown()">Accessibility Options</button>
             </div>
@@ -54,7 +55,10 @@
         <p>&copy; 2024 Habit Tracker. All rights reserved.</p>
         <a href="about.html">About Us</a>
     </footer>
-    <script src="save-script.js"></script>
+    
+    <script src="js/save-script.js"></script>
     <script src="js/index-script.js"></script>
+    <script src="js/colorblind.js"></script>
+    <script src="js/speech-to-text.js"></script>
 </body>
 </html>
