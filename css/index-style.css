@@ -1,169 +1,168 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-  }
-  
-  main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column; /* Adjusted to column layout */
-  }
-  
-  footer {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .accessibility-options {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  .accessibility-options:hover .dropdown-content {
-    display: block;
-  }
-  
-  .dropdown-item {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .habit-tracker-heading {
-    margin: 0;
-  }
-  
-  .accessibility-options {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .habit-form {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .input-container {
-    display: flex;
-    gap: 10px;
-  }
-  
-  input, button {
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  
-  .habit-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .habit-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .habit-item {
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .habit-item span {
-    margin-right: 10px;
-  }
-  
-  .habit-item button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  /* Colorblind options */
-  .colorblind-friendly {
-    background-color: #f0f0f0;
-    color: #333;
-  }
-  
-  /* Styles for users with protanopia (red-green colorblindness) */
-  .colorblind-friendly-protanopia .habit-list,
-  .colorblind-friendly-protanopia .habit-item {
-    border-color: #bbb; /* Adjust border color for better visibility */
-  }
-  
-  .colorblind-friendly-protanopia .habit-item span {
-    color: #333; /* Darker text color for better contrast */
-  }
-  
-  .colorblind-friendly-protanopia .habit-item button {
-    background-color: #ff0000; /* Adjust button color for better visibility */
-  }
-  
-  /* Styles for users with deuteranopia (red-green colorblindness) */
-  .colorblind-friendly-deuteranopia .habit-list,
-  .colorblind-friendly-deuteranopia .habit-item {
-    border-color: #bbb; /* Adjust border color for better visibility */
-  }
-  
-  .colorblind-friendly-deuteranopia .habit-item span {
-    color: #333; /* Darker text color for better contrast */
-  }
-  
-  .colorblind-friendly-deuteranopia .habit-item button {
-    background-color: #ff0000; /* Adjust button color for better visibility */
-  }
-  
-  .habit-list.colorblind-friendly {
-    background-color: #f0f0f0; /* Light gray background for colorblind mode */
-  }
-  
-  .habit-item.colorblind-friendly {
-    border: 1px solid #999; /* Gray border for habit items in colorblind mode */
-  }
-  
-  .habit-item.colorblind-friendly span {
-    color: #333; /* Dark gray text for habit items in colorblind mode */
-  }
-  
-  .habit-form.colorblind-friendly label {
-    color: #333; /* Dark gray label text for form in colorblind mode */
-  }
-  
-  .habit-form.colorblind-friendly input {
-    border: 1px solid #999; /* Gray border for input in colorblind mode */
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #cc8f95; /* Set the background color */
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #dc3545;
+  border-top: 1px solid #ddd;
+  color: black;
+}
+
+footer a {
+  color: blue;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.accessibility-options {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.accessibility-options:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #dc3545;
+  color: black;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.habit-tracker-heading {
+  margin: 0;
+  font-size: 24px;
+}
+
+.accessibility-options {
+  display: flex;
+  gap: 10px;
+}
+
+.accessibility-options a {
+  color: black;
+  text-decoration: none;
+}
+
+.accessibility-options a:hover {
+  text-decoration: underline;
+}
+
+.habit-tracker-heading,
+.habit-form {
+  margin: 0;
+}
+
+.motivational-quotes,
+.habit-form {
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  padding-top: 75px;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+input,
+button {
+  padding: 8px;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.habit-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.habit-item span {
+  margin-right: 10px;
+}
+
+.habit-item button {
+  background-color: #dc3545;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.habit-tips {
+  padding-top: 10px;
+}
+
+/* Colorblind options */
+.colorblind-friendly,
+.habit-list.colorblind-friendly,
+.habit-item.colorblind-friendly,
+.habit-form.colorblind-friendly label,
+.habit-form.colorblind-friendly input {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.colorblind-friendly-protanopia .habit-list,
+.colorblind-friendly-protanopia .habit-item,
+.colorblind-friendly-deuteranopia .habit-list,
+.colorblind-friendly-deuteranopia .habit-item {
+  border-color: #bbb;
+}
+
+.colorblind-friendly-protanopia .habit-item span,
+.colorblind-friendly-deuteranopia .habit-item span {
+  color: #333;
+}
+
+.colorblind-friendly-protanopia .habit-item button,
+.colorblind-friendly-deuteranopia .habit-item button {
+  background-color: #ff0000;
+}

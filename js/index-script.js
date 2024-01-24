@@ -73,6 +73,15 @@ function stopSpeechRecognition() {
     }
 }
 
+function toggleDropdown() {
+    var dropdown = document.querySelector('.dropdown-content');
+    dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+}
+
+function toggleSpeechToText() {
+    // Add your logic for toggling Speech-to-Text here
+}
+
 function addHabit() {
   const habitInput = document.getElementById("habit-input");
   const habitList = document.querySelector(".habit-list");
@@ -96,3 +105,22 @@ function removeHabit(button) {
   habitItem.remove();
   document.getElementById("habit-input").focus();
 }
+
+// Motivational Quotes
+var quotes = [
+    "Believe you can and you're halfway there. -Theodore Roosevelt",
+    "Your only limitation is the one you set up in your own mind! -Napoleon Hill",
+    "Don't watch the clock; do what it does. Keep going. -Sam Levenson",
+    "It always seems impossible until it's done. -Nelson Mandela",
+    "The only way to achieve the impossible is to believe it is possible. -Charles Kingsleigh"
+];
+
+// Function to display a random quote
+function displayRandomQuote() {
+    var quoteContainer = document.getElementById('quote-container');
+    var randomIndex = Math.floor(Math.random() * quotes.length);
+    quoteContainer.textContent = quotes[randomIndex];
+}
+
+// Display a random quote on page load
+displayRandomQuote();

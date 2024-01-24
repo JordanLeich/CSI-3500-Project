@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index-style.css">
     <title>Accessible Habit Tracker</title>
 </head>
+
 <body>
 
     <header role="banner">
@@ -22,11 +24,24 @@
     </header>
 
     <main role="main">
+        <section class="motivational-quotes" role="region" aria-live="assertive">
+            <h2>Motivational Quote:</h2>
+            <p id="quote-container"></p>
+        </section>
         <section class="habit-form" role="form" aria-labelledby="habit-form-label">
             <label id="habit-form-label" for="habit-input">Add New Habit:</label>
             <div class="input-container">
                 <input type="text" id="habit-input" placeholder="Enter your habit" aria-label="Habit input" role="textbox">
                 <button id="add-habit-btn" onclick="addHabit()" aria-label="Add habit">Add</button>
+            </div>
+            <div class="habit-tips">
+                <h2>Habit Tips:</h2>
+                <ul>
+                    <li>Consistency is key! Try to perform your habit at the same time every day.</li>
+                    <li>Start small. Begin with manageable goals to build momentum.</li>
+                    <li>Reward yourself when you successfully complete your habit.</li>
+                    <li>Use reminders or alarms to help establish a routine.</li>
+                </ul>
             </div>
         </section>
 
@@ -41,15 +56,5 @@
     </footer>
 
     <script src="js/index-script.js"></script>
-    <script>
-        function toggleDropdown() {
-            var dropdown = document.querySelector('.dropdown-content');
-            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-        }
-
-        function toggleSpeechToText() {
-            // Add your logic for toggling Speech-to-Text here
-        }
-    </script>
 </body>
 </html>
